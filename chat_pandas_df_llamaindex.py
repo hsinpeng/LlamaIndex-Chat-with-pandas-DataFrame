@@ -1,12 +1,19 @@
 import streamlit as st
 import pandas as pd
 import os
+from st_dev_info import developer_info_simple_stream, developer_info_simple_static
 
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
 from llama_index.core.agent import ReActAgent
 from llama_index.core.tools import QueryEngineTool
 from llama_index.experimental.query_engine import PandasQueryEngine
+
+
+APP_TITLE = "LlamaIndex: Chat with pandas DataFrame"
+AUTHOR = "Sheldon Hsin-Peng Lin"
+EMAIL = "hsinpeng168@gmail.com"
+GITHUB = "https://github.com/hsinpeng"
 
 
 file_formats = {
@@ -40,8 +47,16 @@ def load_data(uploaded_file):
         return None
 
 
-st.set_page_config(page_title="LlamaIndex: Chat with pandas DataFrame", page_icon="🦜")
-st.title("🦜 LlamaIndex: Chat with pandas DataFrame")
+st.set_page_config(page_title=APP_TITLE, page_icon="🦜")
+st.title(f":bar_chart: {APP_TITLE}")
+# Display author info
+if "has_been_streamed" not in st.session_state:
+    st.session_state["has_been_streamed"] = True
+    developer_info_simple_stream(author=AUTHOR, email=EMAIL, github=GITHUB)
+else:
+    developer_info_simple_static(author=AUTHOR, email=EMAIL, github=GITHUB)
+st.divider()
+
 
 uploaded_file = st.file_uploader(
     "Upload a Data file",
