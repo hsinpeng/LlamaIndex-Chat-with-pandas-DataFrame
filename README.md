@@ -45,10 +45,10 @@ Thanks to the graphical user interface, the usage of this application is pretty 
 # Features ✨
 - Natural language interface for automatic data analyzing by LLM agent and tools. 📊
 - Support variouse file types fo dataset. 📄
-- Implementation of LlamaIndex. (Note that most related sources are implemented by LangChain) 👍
+- Implementation of LlamaIndex. (Note that most of the related projects are developed by LangChain) 👍
 
 # Limitations ⚠️
-- Cannot deal with non-tabular data, or extract tabular data from unsupported file types.
+- Cannot deal with non-tabular data, or extract tabular data from unsupported file types. 💔
 - Cannot perform a data analysis on large datasets since the LLM has its token limitation. 🚫
 - The data is not cached and the analysis report as well. 🔄
 
@@ -56,12 +56,12 @@ Thanks to the graphical user interface, the usage of this application is pretty 
 - Voice interface: Convert user's speech to text and perform a data analysis 🗣️
 - Third-party's data sources: Integrating internal and external data without file uploading 🤝
 - Perform intermediates checkings on the results to avoid LLM bias 🤔
-- Handle larger datasets
+- Handle larger datasets 📚
 
 # Background 🧑‍🎓
 My name is [Sheldon Hsin-Peng Lin](https://www.linkedin.com/in/sheldon-hsin-peng-lin-51306685/). I'm a software engineer and a research staff. I build various applications in telecommunication industry. 👨‍🔧
-The LLMs are really good at understanding human semantics, and an agent can perform data analysis by LLM reasoning and tool calling. 📚
+Since LLMs are really good at understanding human semantics, and an agent can perform data analysis by LLM reasoning and tool calling. 📚
 This application is developed based on the above conditions, and I hope it can help you as well. 👍
 
 # Acknowledgements 🙏
-The application is greatly inspired by [LangChain Streamlit agent examples](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/chat_pandas_df.py).
+The application is greatly inspired by [LangChain Streamlit agent examples](https://github.com/langchain-ai/streamlit-agent/blob/main/streamlit_agent/chat_pandas_df.py). ❤️
