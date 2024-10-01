@@ -1,6 +1,8 @@
 # LlamaIndex: Chat with Pandas DataFrame
 This application leverages OpenAI's language models, the pandas data analysis library, and LlamaIndex's agents and tools to provide users with real-time qualitative data analysis and insights of the upload file. 
 
+![application homepage](./homepage.png)
+
 ## Python Libraries
 This application is powered by several libraries:
 - [Streamlit](https://streamlit.io/): For the User Interface 🖥️
