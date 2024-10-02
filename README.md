@@ -43,7 +43,7 @@ Thanks to the graphical user interface, the usage of this application is pretty 
 3. Enter your query text about the data file or even unrelated question. ❓
 4. The LLM agent will perform data analysis by tool calling or directly anwser your question based on your query text and data file. 💡
 
-Note: If you don't have a suitable data file. [Sample datasets](https://github.com/hsinpeng/sample_datasets.git) is provided on my github as well.
+Note: If you don't have a suitable data file. [Sample datasets](https://github.com/hsinpeng/sample_datasets.git) are provided on my github as well.
 
 # Features ✨
 - Natural language interface for automatic data analyzing by LLM agent and tools. 📊
