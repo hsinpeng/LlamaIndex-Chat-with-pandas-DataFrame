@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
-from st_dev_info import developer_info_simple_stream, developer_info_simple_static
+from st_dev_info import developer_info_simple_stream, developer_info_simple_static, stream_words
 
 from llama_index.llms.openai import OpenAI
 from llama_index.core import Settings
@@ -46,14 +46,18 @@ def load_data(uploaded_file):
         st.error(f"Unsupported file format: {ext}")
         return None
 
-
+# Introduction section
 st.set_page_config(page_title=APP_TITLE, page_icon="🦜")
+st.subheader("Hello user 👋")
 st.title(f":bar_chart: {APP_TITLE}")
 # Display author info
+welcome_message = "Just upload your data file, then feel free to ask any question about the data!"
 if "has_been_streamed" not in st.session_state:
     st.session_state["has_been_streamed"] = True
+    st.write(stream_words(welcome_message))
     developer_info_simple_stream(author=AUTHOR, email=EMAIL, github=GITHUB)
 else:
+    st.write(welcome_message)
     developer_info_simple_static(author=AUTHOR, email=EMAIL, github=GITHUB)
 st.divider()
 
